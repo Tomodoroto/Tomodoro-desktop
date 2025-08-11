@@ -5,6 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:tomodoro/models/tasky.dart';
 import 'package:tomodoro/pages/home.dart';
 import 'package:tomodoro/providers/theme_provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -47,6 +48,7 @@ class MyApp extends ConsumerWidget {
       // =======================
       theme: ThemeData(
         brightness: Brightness.light,
+        fontFamily: GoogleFonts.vazirmatn().fontFamily,
 
         // Main color: warm orange
         primaryColor: const Color(0xFFD99E48),
@@ -62,18 +64,18 @@ class MyApp extends ConsumerWidget {
         cardColor: const Color(0xFFFFF8E7),
 
         // AppBar style
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           centerTitle: true,
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
 
           // Icons color
-          iconTheme: IconThemeData(color: Color(0xFF3D8B7D)),
+          iconTheme: const IconThemeData(color: Color(0xFF3D8B7D)),
 
           // Title text style
-          titleTextStyle: TextStyle(
-            color: Color(0xFF3D8B7D),
-            fontWeight: FontWeight.bold,
+          titleTextStyle: GoogleFonts.vazirmatn(
+            color: const Color(0xFF3D8B7D),
+            fontWeight: FontWeight.w700,
             fontSize: 20,
           ),
         ),
@@ -92,9 +94,9 @@ class MyApp extends ConsumerWidget {
         ),
 
         // Default text styles
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.black87),
-          bodyMedium: TextStyle(color: Colors.black87),
+        textTheme: TextTheme(
+          bodyLarge: GoogleFonts.vazirmatn(color: Colors.black87),
+          bodyMedium: GoogleFonts.vazirmatn(color: Colors.black87),
         ),
       ),
 
@@ -103,6 +105,7 @@ class MyApp extends ConsumerWidget {
       // =======================
       darkTheme: ThemeData(
         brightness: Brightness.dark,
+        fontFamily: GoogleFonts.vazirmatn().fontFamily,
 
         // Main color: warm orange
         primaryColor: const Color(0xFFD99E48),
@@ -121,18 +124,18 @@ class MyApp extends ConsumerWidget {
         canvasColor: const Color(0xFF142B2F),
 
         // AppBar style
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           centerTitle: true,
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
 
           // Icons color
-          iconTheme: IconThemeData(color: Color(0xFFD99E48)),
+          iconTheme: const IconThemeData(color: Color(0xFFD99E48)),
 
           // Title text style
-          titleTextStyle: TextStyle(
-            color: Color(0xFFD99E48),
-            fontWeight: FontWeight.bold,
+          titleTextStyle: GoogleFonts.vazirmatn(
+            color: const Color(0xFFD99E48),
+            fontWeight: FontWeight.w700,
             fontSize: 20,
           ),
         ),
@@ -151,9 +154,9 @@ class MyApp extends ConsumerWidget {
         ),
 
         // Default text styles
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white70),
-          bodyMedium: TextStyle(color: Colors.white70),
+        textTheme: TextTheme(
+          bodyLarge: GoogleFonts.vazirmatn(color: Colors.white70),
+          bodyMedium: GoogleFonts.vazirmatn(color: Colors.white70),
         ),
       ),
 
